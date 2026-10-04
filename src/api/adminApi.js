@@ -1,11 +1,7 @@
 // ============================================================
 // ADMIN API — uses the admin-gate token from sessionStorage
 // ============================================================
-const API_BASE =
-  (typeof process !== "undefined" &&
-    process.env &&
-    process.env.REACT_APP_API_URL) ||
-  "http://localhost:5000/api";
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 const ADMIN_TOKEN_KEY = "admin_gate_token";
 
